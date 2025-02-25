@@ -7,7 +7,7 @@ async function bootstrap() {
     origin: [
       'http://localhost:5173',
       'http://localhost:3000',
-      'https://dreamy-rabanadas-1ac7fc.netlify.app'
+      'https://gleeful-pithivier-a58eb3.netlify.app'
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
