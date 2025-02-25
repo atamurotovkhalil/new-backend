@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'], // ✅ Use an array
+    origin: ['http://localhost:5173', 'http://localhost:3000', 'https://dreamy-rabanadas-1ac7fc.netlify.app/'], // ✅ Use an array
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: true, // Enable cookies/auth headers if needed
