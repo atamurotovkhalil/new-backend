@@ -17,6 +17,7 @@ export class BooksService {
         const resPerPage = 10;
         const currentPage = Number(query.page) || 1;
         const skip = (currentPage - 1) * resPerPage;
+       
 
         const keyword = query.keyword
             ? {
@@ -26,11 +27,11 @@ export class BooksService {
                 ]
             }
             : {};
-        return await this.booksModel.find({ ...keyword }).limit(resPerPage).skip(skip).lean();
+        return await this.booksModel.find({ ...keyword }).skip(skip).limit(resPerPage).lean();
     }
 
     async create(createBookDto: CreateBookDto): Promise<Books> {
-        return await new this.booksModel(createBookDto).save();
+        return await  this.booksModel.create(createBookDto);
     }
 
     async deleteById(id: string): Promise<Books | null> {

@@ -7,7 +7,8 @@ async function bootstrap() {
     origin: [
       'http://localhost:5173',
       'http://localhost:3000',
-      'https://gleeful-pithivier-a58eb3.netlify.app'
+      'https://gleeful-pithivier-a58eb3.netlify.app',
+      'https://new-book-api.netlify.app'
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',

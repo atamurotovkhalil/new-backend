@@ -43,24 +43,4 @@ export class BooksController {
     async updateProduct(@Param('id') id: string, @Body() product: UpdateBookDto): Promise<Books | null> {
         return await this.booksService.updateById(id, product);
     }
-
-    // @Put('upload/:id')
-    // @UseInterceptors(FilesInterceptor('images', 5, multerOptions))
-    // async uploadImages(
-    //     @Param('id') id: string,
-    //     @UploadedFiles() files: Multer.File[] // ✅ Use `Multer.File[]`
-    // ) {
-    //     if (!files || files.length === 0) {
-    //         return { message: 'No files uploaded' };
-    //     }
-
-    //     const imagePaths = files.map(file => file.path);
-    //     const updatedBook = await this.booksService.updateById(id, { images: imagePaths });
-
-    //     return {
-    //         message: 'Files uploaded successfully',
-    //         images: imagePaths,
-    //         updatedBook,
-    //     };
-    // }
 }

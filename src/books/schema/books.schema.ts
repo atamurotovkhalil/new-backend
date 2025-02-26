@@ -8,7 +8,7 @@ export type booksProduct = HydratedDocument<Books>;
 
 export class Books {
     @Prop()
-    @IsOptional()
+    @IsOptional() 
     title: string;
 
     @Prop()
